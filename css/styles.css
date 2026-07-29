@@ -228,6 +228,29 @@ img, video { max-width: 100%; display: block; }
 
 .style-handle:hover { text-decoration: underline; }
 
+/* ============ TikTok live embed ============ */
+.tiktok-live {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+.tiktok-live-head h3 { font-size: 1.2rem; margin-bottom: 0.3rem; }
+
+.tiktok-live-head p { color: var(--text-dim); font-size: 0.92rem; margin-bottom: 1.2rem; }
+
+.tiktok-live .tiktok-embed { margin: 0 auto; }
+
+/* Fallback link shown until TikTok's embed script swaps in the widget */
+.tiktok-embed a { color: var(--accent); font-weight: 600; }
+.tiktok-embed a:hover { text-decoration: underline; }
+
+.video-embed { grid-column: 1 / -1; display: flex; justify-content: center; }
+
+.video-embed .tiktok-embed { margin: 0; }
+
 /* ============ Video grid ============ */
 .video-grid {
   display: grid;

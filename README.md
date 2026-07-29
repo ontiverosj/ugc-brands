@@ -11,10 +11,25 @@ social accounts so they can verify everything live.
 - **Check My Work** — direct links to my TikTok, Instagram, and Facebook accounts
 - **Contact** — email button for brand inquiries
 
-## Adding your videos (2 steps)
+## Adding your videos
 
-1. Put the video file into the `assets/videos/` folder (vertical `.mp4` works best).
-2. Open `js/videos.js` and add one block to the `VIDEOS` list:
+The portfolio section already shows a **live TikTok widget** of the
+@wecutglass101 account — it always displays the latest videos automatically,
+nothing to maintain.
+
+To feature specific videos, open `js/videos.js` and add blocks to the
+`VIDEOS` list. Two ways:
+
+**A) A TikTok you've posted** — paste its link (Share → Copy link on the video):
+
+   ```js
+   {
+     tiktok: "https://www.tiktok.com/@jake.eatsss/video/1234567890123456789",
+     title: "Restaurant Review",
+   },
+   ```
+
+**B) A video file** — put it in `assets/videos/`, then:
 
    ```js
    {
@@ -24,11 +39,11 @@ social accounts so they can verify everything live.
    },
    ```
 
-That's it — the site shows the video automatically. (Optional: add a
-`poster: "assets/thumbs/my-ad.jpg"` line for a custom thumbnail.)
+(Optional for files: add a `poster: "assets/thumbs/my-ad.jpg"` line for a
+custom thumbnail.)
 
-Until you add videos, the portfolio section shows "coming soon" tiles that
-point brands to your live accounts.
+Until you add featured videos, the section shows "coming soon" tiles under
+the live TikTok widget.
 
 > Tip: keep video files under ~50 MB each so the page loads fast. Export at
 > 1080×1920 with H.264/MP4 for best results.

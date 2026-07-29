@@ -5,6 +5,30 @@
 
   if (typeof VIDEOS !== "undefined" && VIDEOS.length > 0) {
     VIDEOS.forEach((v) => {
+      // TikTok link → official embed (processed by TikTok's embed.js)
+      if (v.tiktok) {
+        const wrap = document.createElement("div");
+        wrap.className = "video-embed";
+        const quote = document.createElement("blockquote");
+        quote.className = "tiktok-embed";
+        quote.setAttribute("cite", v.tiktok);
+        const idMatch = v.tiktok.match(/video\/(\d+)/);
+        if (idMatch) quote.setAttribute("data-video-id", idMatch[1]);
+        quote.style.maxWidth = "605px";
+        quote.style.minWidth = "260px";
+        const section = document.createElement("section");
+        const link = document.createElement("a");
+        link.target = "_blank";
+        link.rel = "noopener";
+        link.href = v.tiktok;
+        link.textContent = v.title || "Watch on TikTok";
+        section.appendChild(link);
+        quote.appendChild(section);
+        wrap.appendChild(quote);
+        grid.appendChild(wrap);
+        return;
+      }
+
       const card = document.createElement("article");
       card.className = "video-card";
 
