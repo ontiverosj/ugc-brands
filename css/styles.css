@@ -247,9 +247,22 @@ img, video { max-width: 100%; display: block; }
 .tiktok-embed a { color: var(--accent); font-weight: 600; }
 .tiktok-embed a:hover { text-decoration: underline; }
 
-.video-embed { grid-column: 1 / -1; display: flex; justify-content: center; }
+.video-embed { grid-column: span 2; display: flex; justify-content: center; }
 
-.video-embed .tiktok-embed { margin: 0; }
+.video-embed .tiktok-embed { margin: 0; width: 100%; }
+
+/* Card look for the fallback link (replaced once TikTok's widget loads) */
+.video-embed blockquote.tiktok-embed {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.4rem;
+  text-align: center;
+}
+
+@media (max-width: 720px) {
+  .video-embed { grid-column: 1 / -1; }
+}
 
 /* ============ Video grid ============ */
 .video-grid {

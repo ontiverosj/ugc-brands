@@ -31,7 +31,20 @@
 // ============================================================
 
 const VIDEOS = [
-  // Paste @jake.eatsss videos (or any others) here.
+  {
+    tiktok: "https://www.tiktok.com/@wecutglass101/video/7522254447527972109",
+    title: "Satisfying glass strawberry cutting 🍓 ASMR",
+  },
+  {
+    tiktok: "https://www.tiktok.com/@wecutglass101/video/7520714636409179447",
+    title: "Satisfying glass strawberry cutting 🍓 ASMR",
+  },
+  {
+    tiktok: "https://www.tiktok.com/@wecutglass101/video/7520772595982077239",
+    title: "Satisfying blue lemon cutting 🍋 ASMR",
+  },
+
+  // Paste @jake.eatsss videos (or any others) here later.
   // Example (delete the // to activate):
   // {
   //   tiktok: "https://www.tiktok.com/@jake.eatsss/video/1234567890123456789",
