@@ -318,6 +318,20 @@ img, video { max-width: 100%; display: block; }
 
 .social-info strong { font-size: 1rem; }
 
+.badge-new {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.4rem;
+  padding: 0.1rem 0.55rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
 .social-info span { color: var(--text-dim); font-size: 0.85rem; }
 
 .social-arrow {
