@@ -1,17 +1,21 @@
 /* ============ Base ============ */
+/* Brand palette from the Jake Onti brand style guide (Canva):
+   cream #F6F2EB · off-white #FAF8F4 · ink #1E1D1D · gray #DFDFDF
+   purple #7C3BED · blue #2B66EB · Playfair Display + Poppins */
 :root {
-  --bg: #0d0d12;
-  --bg-alt: #14141c;
-  --card: #1a1a24;
-  --card-hover: #21212e;
-  --text: #f4f4f6;
-  --text-dim: #a7a7b4;
-  --accent: #ff4d5a;
-  --accent-soft: rgba(255, 77, 90, 0.12);
-  --border: rgba(255, 255, 255, 0.08);
+  --bg: #f6f2eb;
+  --bg-alt: #faf8f4;
+  --card: #ffffff;
+  --card-hover: #ffffff;
+  --text: #1e1d1d;
+  --text-dim: #6d6a64;
+  --accent: #7c3bed;
+  --accent-soft: rgba(124, 59, 237, 0.1);
+  --accent-2: #2b66eb;
+  --border: #dfdfdf;
   --radius: 18px;
-  --font-head: 'Sora', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --font-head: 'Playfair Display', Georgia, serif;
+  --font-body: 'Poppins', sans-serif;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -50,18 +54,18 @@ img, video { max-width: 100%; display: block; }
 .btn-primary {
   background: var(--accent);
   color: #fff;
-  box-shadow: 0 8px 24px rgba(255, 77, 90, 0.35);
+  box-shadow: 0 8px 24px rgba(124, 59, 237, 0.3);
 }
 
-.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(255, 77, 90, 0.45); }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(124, 59, 237, 0.4); }
 
 .btn-ghost {
-  border: 1.5px solid var(--border);
+  border: 1.5px solid rgba(30, 29, 29, 0.25);
   color: var(--text);
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(30, 29, 29, 0.02);
 }
 
-.btn-ghost:hover { background: rgba(255, 255, 255, 0.08); transform: translateY(-2px); }
+.btn-ghost:hover { background: rgba(30, 29, 29, 0.06); transform: translateY(-2px); }
 
 .btn-small { padding: 0.5rem 1.2rem; font-size: 0.9rem; }
 
@@ -72,7 +76,7 @@ img, video { max-width: 100%; display: block; }
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(13, 13, 18, 0.85);
+  background: rgba(246, 242, 235, 0.88);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
 }
@@ -123,14 +127,14 @@ img, video { max-width: 100%; display: block; }
 .hero {
   padding: clamp(4rem, 10vw, 7.5rem) 0;
   background:
-    radial-gradient(ellipse 60% 50% at 80% 0%, rgba(255, 77, 90, 0.15), transparent),
-    radial-gradient(ellipse 50% 40% at 10% 100%, rgba(96, 77, 255, 0.12), transparent);
+    radial-gradient(ellipse 60% 50% at 80% 0%, rgba(124, 59, 237, 0.1), transparent),
+    radial-gradient(ellipse 50% 40% at 10% 100%, rgba(43, 102, 235, 0.09), transparent);
 }
 
 .hero-inner { max-width: 720px; }
 
 .hero-kicker {
-  color: var(--accent);
+  color: var(--accent-2);
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -177,7 +181,7 @@ img, video { max-width: 100%; display: block; }
 .section-alt { background: var(--bg-alt); }
 
 .section-kicker {
-  color: var(--accent);
+  color: var(--accent-2);
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -212,7 +216,11 @@ img, video { max-width: 100%; display: block; }
   transition: transform 0.15s ease, background 0.15s ease;
 }
 
-.style-card:hover { transform: translateY(-4px); background: var(--card-hover); }
+.style-card:hover {
+  transform: translateY(-4px);
+  background: var(--card-hover);
+  box-shadow: 0 14px 30px rgba(30, 29, 29, 0.08);
+}
 
 .style-emoji { font-size: 2.2rem; margin-bottom: 0.9rem; }
 
@@ -299,9 +307,9 @@ img, video { max-width: 100%; display: block; }
   justify-content: center;
   gap: 0.7rem;
   background:
-    linear-gradient(160deg, rgba(255, 77, 90, 0.08), rgba(96, 77, 255, 0.08)),
+    linear-gradient(160deg, rgba(124, 59, 237, 0.06), rgba(43, 102, 235, 0.06)),
     var(--card);
-  border: 1.5px dashed rgba(255, 255, 255, 0.15);
+  border: 1.5px dashed rgba(30, 29, 29, 0.2);
   border-radius: var(--radius);
   color: var(--text-dim);
   text-align: center;
@@ -332,7 +340,12 @@ img, video { max-width: 100%; display: block; }
   transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
 }
 
-.social-card:hover { transform: translateY(-3px); background: var(--card-hover); border-color: rgba(255, 255, 255, 0.2); }
+.social-card:hover {
+  transform: translateY(-3px);
+  background: var(--card-hover);
+  border-color: rgba(30, 29, 29, 0.2);
+  box-shadow: 0 14px 30px rgba(30, 29, 29, 0.08);
+}
 
 .social-icon {
   flex-shrink: 0;
@@ -382,7 +395,7 @@ img, video { max-width: 100%; display: block; }
 /* ============ CTA ============ */
 .section-cta {
   background:
-    radial-gradient(ellipse 70% 80% at 50% 0%, rgba(255, 77, 90, 0.12), transparent),
+    radial-gradient(ellipse 70% 80% at 50% 0%, rgba(124, 59, 237, 0.09), transparent),
     var(--bg-alt);
   text-align: center;
 }
