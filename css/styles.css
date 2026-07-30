@@ -229,10 +229,13 @@ img, video { max-width: 100%; display: block; }
 .style-card p { color: var(--text-dim); font-size: 0.95rem; margin-bottom: 1rem; }
 
 .style-handle {
+  display: block;
   color: var(--accent);
   font-weight: 600;
   font-size: 0.9rem;
 }
+
+.style-handle + .style-handle { margin-top: 0.35rem; }
 
 .style-handle:hover { text-decoration: underline; }
 
@@ -271,6 +274,10 @@ img, video { max-width: 100%; display: block; }
 @media (max-width: 720px) {
   .video-embed { grid-column: 1 / -1; }
 }
+
+.live-more { margin-top: 2.5rem; }
+
+.live-more h3 { font-size: 1.2rem; margin-bottom: 1rem; }
 
 /* ============ Video grid ============ */
 .video-grid {
