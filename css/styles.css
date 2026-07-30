@@ -362,6 +362,7 @@ img, video { max-width: 100%; display: block; }
 .social-card.tiktok .social-icon { background: rgba(105, 201, 208, 0.15); color: #69c9d0; }
 .social-card.instagram .social-icon { background: rgba(225, 48, 108, 0.15); color: #e1306c; }
 .social-card.facebook .social-icon { background: rgba(24, 119, 242, 0.15); color: #1877f2; }
+.social-card.youtube .social-icon { background: rgba(255, 0, 0, 0.12); color: #ff0000; }
 
 .social-info { display: flex; flex-direction: column; min-width: 0; }
 
